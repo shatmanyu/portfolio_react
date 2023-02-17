@@ -24,6 +24,7 @@ export default function Portfolio() {
   }
 
   useEffect(()=>{
+    setWidth()
     window.addEventListener('resize',setWidth)
     return () =>{
       window.removeEventListener('resize',setWidth)

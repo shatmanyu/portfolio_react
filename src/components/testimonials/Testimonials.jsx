@@ -60,7 +60,7 @@ export default function Testimonials() {
                   <h4>{item.title}</h4>
                 </div>
               </div>
-            // </CarouselItem>
+            </CarouselItem>
           )})}
       </Carousel>
       </div>

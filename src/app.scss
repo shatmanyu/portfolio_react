@@ -13,11 +13,15 @@
         &::-webkit-scrollbar{
             display: none;
         }
-
+        
         > *{
+            &:not(:first-child){
+                margin-top: 50px !important;
+            }
             width: 100vw;
             height: calc(100vh - 70px);
             scroll-snap-align: start;
         }
+        
     }
 }
