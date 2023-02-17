@@ -1,28 +1,38 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import './portfolio.scss'
-import '../../global.scss'
+import Carousel,{CarouselItem} from '../../globalComponents/Carousel';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSelectedOption } from '../../store/portfolioSlice';
 import data from '../../data.js'
-import Slider from 'react-slick';
 export default function Portfolio() {
   const dispatch = useDispatch();
   const optionState = useSelector((state)=>state.portfolio)
-  const option = optionState.selectedOption
   const listOptions = ['Featured','WebApp','MobileApp','Design','Branding']
+  const [itemsToShow,setItemsToShow] = useState(3)
+  const [currentWidth,changeWidth] = useState(window.innerWidth)
   const handleSelectedOption = (payload)=>{
     dispatch(setSelectedOption(payload))
   }
-  const settings1 = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3
-  };
+  const setWidth = () =>{
+    changeWidth(window.innerWidth)
+    if (currentWidth < 768){
+      setItemsToShow(1)
+    }
+    else{
+      setItemsToShow(3)
+    }
+  }
+
+  useEffect(()=>{
+    window.addEventListener('resize',setWidth)
+    return () =>{
+      window.removeEventListener('resize',setWidth)
+    }
+  })
   return (
     <div className='port' id='portfolio'>
       <h1> Portfolio</h1>
+      <div className='lower-section'>
       <ul>
         {listOptions.map((option) =>{
           return (
@@ -30,15 +40,18 @@ export default function Portfolio() {
         )})}
       </ul>
       <div className="container">
-        {/* <Slider {...settings1}> */}
-        {data[option]?.map((item) =>{
+        <Carousel items={{noOfItems:itemsToShow,changeIndex: optionState.selectedOption}}>
+        {data[optionState.selectedOption]?.map((item) =>{
           return (
+            <CarouselItem>
             <div className='item'>
               <img src={item.img} alt=''/>
               <h3>{item.title}</h3>
             </div>
+            </CarouselItem>
         )})}
-        {/* </Slider> */}
+        </Carousel>
+      </div>
       </div>
     </div>
   )

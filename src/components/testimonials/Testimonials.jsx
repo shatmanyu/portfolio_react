@@ -1,5 +1,6 @@
 import React from 'react'
 import './testimonials.scss'
+import Carousel,{CarouselItem} from '../../globalComponents/Carousel';
 import '../../global.scss'
 export default function Testimonials() {
   const data = [
@@ -39,26 +40,29 @@ export default function Testimonials() {
     <div className='testimonials' id='testimonials'>
       <h1>Testimonials</h1>
       <div className="container">
-        {data.map((item) =>{return(
-            <div className="card ">
-            <div className="top1">
-              <img className='left' src="assets/right-arrow.png" alt="" />
-              <img 
-                className='user'
-                src={item.img}
-                alt="" />
-              <img className='right' src={item.icon} alt="" />
-            </div>
-            <div className="center">
-              {item.desc}
-            </div>
-            <div className="bottom">
-              <h3>{item.name}</h3>
-              <h4>{item.title}</h4>
-            </div>
-          </div>
-        )})}
-
+        <Carousel items={{noOfItems:2,changeIndex: {}}}>
+          {data.map((item) =>{return(
+            <CarouselItem>
+                <div className="card ">
+                <div className="top1">
+                  <img className='left' src="assets/right-arrow.png" alt="" />
+                  <img 
+                    className='user'
+                    src={item.img}
+                    alt="" />
+                  <img className='right' src={item.icon} alt="" />
+                </div>
+                <div className="center">
+                  {item.desc}
+                </div>
+                <div className="bottom">
+                  <h3>{item.name}</h3>
+                  <h4>{item.title}</h4>
+                </div>
+              </div>
+            // </CarouselItem>
+          )})}
+      </Carousel>
       </div>
     </div>
   )

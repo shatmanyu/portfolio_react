@@ -2,6 +2,7 @@ import React from 'react'
 import './works.scss'
 import '../../global.scss'
 import { useState } from 'react';
+import {useSwipeable} from 'react-swipeable'
 export default function Works() {
   const [currentSlide,setCurrentSlide] = useState(0)
   const handleSlide = (dir) =>{
@@ -13,6 +14,11 @@ export default function Works() {
     }
     console.log("currentSlide",currentSlide)
   }
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () =>{handleSlide("right")},
+    onSwipedRight: () =>{handleSlide("left")}
+})
   const data = [
     {
       id: "1",
@@ -45,7 +51,8 @@ export default function Works() {
   return (
     <div className='works' id='works'>
       <div className="slider" 
-      style={{transform: `translateX(-${currentSlide * 100}vw)` }}>
+      style={{transform: `translateX(-${currentSlide * 100}vw)` }}
+      {...handlers}>
       
         {data.map((item) =>{
           return (
