@@ -44,12 +44,16 @@ export default function Portfolio() {
         <Carousel items={{noOfItems:itemsToShow,changeIndex: optionState.selectedOption}}>
         {data[optionState.selectedOption]?.map((item) =>{
           return (
+            
             <CarouselItem>
+              <a href='https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-90/leaderboard/'>
             <div className='item'>
               <img src={item.img} alt=''/>
               <h3>{item.title}</h3>
             </div>
+            </a>
             </CarouselItem>
+           
         )})}
         </Carousel>
       </div>
