@@ -3,7 +3,7 @@ const { createSlice, createAsyncThunk } = require('@reduxjs/toolkit');
 const portfolioSlice = createSlice({
     name: 'portfolio',
     initialState:{
-        selectedOption: 'Featured'
+        selectedOption: 'Web'
     },
     reducers: {
         setSelectedOption(state,action){

@@ -7,7 +7,7 @@ import data from '../../data.js'
 export default function Portfolio() {
   const dispatch = useDispatch();
   const optionState = useSelector((state)=>state.portfolio)
-  const listOptions = ['Featured','WebApp','MobileApp','Design','Branding']
+  const listOptions = ['Web','Machine Learning','MobileApp','Featured']
   const [itemsToShow,setItemsToShow] = useState(3)
   const [currentWidth,changeWidth] = useState(window.innerWidth)
   const handleSelectedOption = (payload)=>{

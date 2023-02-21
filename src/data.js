@@ -1,40 +1,29 @@
 const data = {
-    'WebApp': [{
+    'Machine Learning': [{
       id: 1,
-      title: "Social Media App",
+      title: "Income Classification",
       img:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+        "assets/income.png",
     },
     {
       id: 2,
-      title: "Rampa UI Design",
+      title: "Medicine Recommendation",
       img:
-        "https://cdn.dribbble.com/users/702789/screenshots/15054318/media/4ea5d492b7b07eebc9528ff960794879.png?compress=1&resize=1200x900",
+        "assets/medicine.png",
     },
     {
       id: 3,
-      title: "E-commerce Web Design",
+      title: "Customer Segmentation",
       img:
-        "https://cdn.dribbble.com/users/1387827/screenshots/15466426/media/deb2dca6762cd3610321c98bfccb0b72.png?compress=1&resize=1200x900",
+        "assets/customer.png",
     },
     {
       id: 4,
-      title: "Relax Mobile App",
+      title: "Forbes 2000 global Analysis using Tableau",
       img:
-        "https://cdn.dribbble.com/users/4095861/screenshots/15467417/media/d6a15c416626f12b31fa5ca1db192572.png?compress=1&resize=1200x900",
+        "assets/forbes.png",
     },
-    {
-      id: 5,
-      title: "Hero Web Design",
-      img:
-        "https://cdn.dribbble.com/users/5031392/screenshots/15467520/media/c36b3b15b25b1e190d081abdbbf947cf.png?compress=1&resize=1200x900",
-    },
-    {
-      id: 6,
-      title: "Banking App",
-      img:
-        "https://cdn.dribbble.com/users/3307260/screenshots/15468444/media/447b4501f7a145b05e11c70199a9c417.jpg?compress=1&resize=1200x900",
-    },],
+  ],
     'Featured': [{
       id: 1,
       title: "Web Social Media App",
@@ -137,42 +126,79 @@ const data = {
       img:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
     },],
-    'Branding': [{
+    // 'Branding': [{
+    //   id: 1,
+    //   title: "Content Social Media App",
+    //   img:
+    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    // },
+    // {
+    //   id: 2,
+    //   title: "Content Rampa UI Design",
+    //   img:
+    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    // },
+    // {
+    //   id: 3,
+    //   title: "Content E-commerce Web Design",
+    //   img:
+    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    // },
+    // {
+    //   id: 4,
+    //   title: "Content Relax Mobile App",
+    //   img:
+    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    // },
+    // {
+    //   id: 5,
+    //   title: "Content Keser Web Design",
+    //   img:
+    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Content Banking App",
+    //   img:
+    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    // },],
+    'Web': [{
       id: 1,
-      title: "Content Social Media App",
+      title: "Smart Table",
       img:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+        "assets/cats.png",
     },
     {
       id: 2,
-      title: "Content Rampa UI Design",
+      title: "Blogpage",
       img:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+        "assets/blogpage.png",
     },
     {
       id: 3,
-      title: "Content E-commerce Web Design",
+      title: "portfolio",
       img:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+        "assets/portfolio.png",
     },
-    {
-      id: 4,
-      title: "Content Relax Mobile App",
-      img:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
-    },
-    {
-      id: 5,
-      title: "Content Keser Web Design",
-      img:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
-    },
-    {
-      id: 6,
-      title: "Content Banking App",
-      img:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
-    },]
-  };
+    // {
+    //   id: 4,
+    //   title: "Content Relax Mobile App",
+    //   img:
+    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    // },
+    // {
+    //   id: 5,
+    //   title: "Content Keser Web Design",
+    //   img:
+    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Content Banking App",
+    //   img:
+    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    // },
+  ]
+};
 
   export default data;

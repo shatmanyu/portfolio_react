@@ -79,6 +79,9 @@
                 background-color: orange;
             }
         }
+        &.disable-dots{
+            opacity: 0;
+        }
     }
 }
 
