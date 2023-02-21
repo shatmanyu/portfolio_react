@@ -20,11 +20,13 @@ const Carousel = ({children,items}) =>{
     const handleIndex = (dir) =>{
         // console.log("helo")
         const hi = Math.ceil(React.Children.count(children)/items?.noOfItems);
-        if(dir === 'left'){
-            setActiveIndex(activeIndex > 0 ? activeIndex - 1 : 0)
-        }
-        else{
-            setActiveIndex(activeIndex < hi - 1 ? activeIndex + 1 : hi - 1)
+        if(noOfDots > 1){
+            if(dir === 'left'){
+                setActiveIndex(activeIndex > 0 ? activeIndex - 1 : 0)
+            }
+            else{
+                setActiveIndex(activeIndex < hi - 1 ? activeIndex + 1 : hi - 1)
+            }
         }
     }
     const handlers = useSwipeable({
