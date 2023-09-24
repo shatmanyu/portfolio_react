@@ -5,6 +5,8 @@ const store = configureStore({
     reducer: {
         topbar: topbarReducer,
         portfolio: portfolioReducer,
+
+        
     },
 });
 
