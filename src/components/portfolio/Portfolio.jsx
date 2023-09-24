@@ -46,7 +46,7 @@ export default function Portfolio() {
           return (
             
             <CarouselItem>
-              <a href='https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-90/leaderboard/'>
+              <a href='https://github.com/shatmanyu'>
             <div className='item'>
               <img src={item.img} alt=''/>
               <h3>{item.title}</h3>
